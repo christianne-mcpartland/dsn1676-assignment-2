@@ -74,6 +74,7 @@ body {
 .green:hover {
     background-color: white;
     color: black;
+    transition: 0.5s linear;
 }
 
 .red {
@@ -86,10 +87,12 @@ body {
     margin: auto;
     color: white;
     text-decoration: none;
+    margin: 1em;
 }
 
 .red:hover {
     background-color: white;
     color: black;
+    transition: 0.5s linear;
 }
 
