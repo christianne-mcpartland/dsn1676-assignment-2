@@ -22,6 +22,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+    text-align: center;
+}
+
 .clock-face {
     height: 300px;
     width: 300px;
@@ -30,11 +34,21 @@ html {
     margin: 0 auto;
 }
 
+.clock-face:target .hand-hour {
+    transform: rotate(360deg);
+}
+
+.clock-face:target .hand-minute {
+    transform: rotate(4320deg);
+}
+
 .hand {
   width: 14px;
     position: absolute;
-    bottom: calc(50% - 7px);
+    bottom: calc(50%);
     left: calc(50% - 7px);
+    transition: all 10s linear;
+    transform-origin: bottom center;
 }
 
 .center {
@@ -42,5 +56,40 @@ html {
     position: absolute;
     bottom: calc(50% - 14px);
     left: calc(50% - 14px); 
+}
+
+.green {
+	width: 100px;
+	height: 100px;
+    line-height: 6em;
+	background: green;
+	border-radius: 50px;
+    display: inline-block;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    margin: 1em;
+}
+
+.green:hover {
+    background-color: white;
+    color: black;
+}
+
+.red {
+	width: 100px;
+	height: 100px;
+    line-height: 6em;
+	background: red;
+	border-radius: 50px;
+    display: inline-block;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.red:hover {
+    background-color: white;
+    color: black;
 }
 
